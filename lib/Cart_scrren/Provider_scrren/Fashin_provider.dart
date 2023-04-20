@@ -8,11 +8,11 @@ class Fashion_provider extends ChangeNotifier
     Fashion_model(img: "assets/image/boy_f/f2.jpg",name: "Hudi",price: 1000,line: "Best For Each"),
     Fashion_model(img: "assets/image/boy_f/f3.jpg",name: "Hudi",price: 1000,line: "Best For Each"),
     Fashion_model(img: "assets/image/boy_f/f4.jpg",name: "Hudi",price: 1000,line: "Best For Each"),
-    Fashion_model(img: "assets/image/boy_f/f5.jpg",name: "Hudi",price: 1000,line: "Best For Each"),
-    Fashion_model(img: "assets/image/boy_f/f6.jpg",name: "Hudi",price: 1000,line: "Best For Each"),
-    Fashion_model(img: "assets/image/boy_f/f7.jpg",name: "Hudi",price: 1000,line: "Best For Each"),
-    Fashion_model(img: "assets/image/boy_f/f8.jpg",name: "Hudi",price: 1000,line: "Best For Each"),
-    Fashion_model(img: "assets/image/boy_f/f9.jpg",name: "Hudi",price: 1000,line: "Best For Each"),
-    Fashion_model(img: "assets/image/boy_f/f10.jpg",name: "Hudi",price: 1000,line: "Best For Each"),
+    Fashion_model(img: "assets/image/boy_f/f5.jpg",name: "Shirt",price: 1000,line: "Best For Each"),
+    Fashion_model(img: "assets/image/boy_f/f6.jpg",name: "Shirt",price: 1000,line: "Best For Each"),
+    Fashion_model(img: "assets/image/boy_f/f7.jpg",name: "Shirt",price: 1000,line: "Best For Each"),
+    Fashion_model(img: "assets/image/boy_f/f8.jpg",name: "Jinse",price: 1000,line: "Best For Each"),
+    Fashion_model(img: "assets/image/boy_f/f9.jpg",name: "Jinse",price: 1000,line: "Best For Each"),
+    Fashion_model(img: "assets/image/boy_f/f10.jpg",name: "Jinse",price: 1000,line: "Best For Each"),
   ];
 }

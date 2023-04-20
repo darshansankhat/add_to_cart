@@ -12,16 +12,16 @@ class Home_scrren extends StatefulWidget {
 }
 
 class _Home_scrrenState extends State<Home_scrren> {
-  Fashion_provider? provi;
 
-  @override
-  void initState() {
-    super.initState();
-    provi = Provider.of<Fashion_provider>(context, listen: false);
-  }
+  Fashion_provider? provif;
+  Fashion_provider? provit;
 
   @override
   Widget build(BuildContext context) {
+
+     provif =Provider.of<Fashion_provider>(context,listen: false);
+     provit =Provider.of<Fashion_provider>(context,listen: true);
+
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -37,6 +37,7 @@ class _Home_scrrenState extends State<Home_scrren> {
             physics: BouncingScrollPhysics(),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
+                mainAxisExtent: 225,
               ),
               itemBuilder: (context, index) {
                 return item(index);
@@ -49,19 +50,26 @@ class _Home_scrrenState extends State<Home_scrren> {
 
   Widget item(int index) {
     return Container(
-      height: 150,
-      width: 150,
-      margin: EdgeInsets.all(10),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          color: Colors.white,
-          boxShadow: [BoxShadow(color: Colors.black, blurRadius: 5)]),
-      child: ClipRRect(
-          borderRadius: BorderRadius.circular(20),
-          child: Image.asset(
-            "${provi?.Fashionlist[index].img}",
-            fit: BoxFit.fill,
-          )),
+      child: Column(
+        children: [
+          Container(
+            height: 150,
+            width: 150,
+            margin: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Colors.white,
+                boxShadow: [BoxShadow(color: Colors.black, blurRadius: 5)]),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Image.asset("${provif?.Fashionlist[index].img}",fit: BoxFit.fill,
+              ),
+            ),
+          ),
+          Text("${provif?.Fashionlist[index].name}"),
+          Text("${provif!.Fashionlist[index].price}")
+        ],
+      )
     );
   }
 }
